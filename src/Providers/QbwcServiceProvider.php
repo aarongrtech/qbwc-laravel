@@ -38,7 +38,7 @@ class QbwcServiceProvider extends ServiceProvider
 
         $this->publishes([
             $packageBaseDir . '/src/Migrations/create_queues_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_queues_table.php'),
-            $packageBaseDir . '/src/Migrations/create_tasks_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_tasks_table.php'),
+            $packageBaseDir . '/src/Migrations/create_task_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_task_table.php'),
             $packageBaseDir . '/src/Migrations/create_task_configs_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_task_configs_table.php'),
         ], 'qbwc-migrations');
 
