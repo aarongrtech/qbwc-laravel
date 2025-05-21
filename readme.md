@@ -15,7 +15,7 @@ Ensure that your `composer.json` includes the necessary autoload settings:
 ```json
 "autoload": {
     "psr-4": {
-        "AaronGRTech\\QbwcLaravel\\": "./src/AaronGRTech/QbwcLaravel"
+        "AaronGRTech\\QbwcLaravel\\": "./src"
     }
 },
 "extra": {
