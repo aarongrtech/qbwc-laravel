@@ -91,7 +91,7 @@ class SoapController extends Controller
             $response = new ArrayOfString(['', 'nvu']);
 
             if (
-                $parameters->getStrUserName() == config('qbwc.user') ||
+                $parameters->getStrUserName() == config('qbwc.user') &&
                 $parameters->getStrPassword() == config('qbwc.password')
             ) {
                 $this->soapService->generateTicket();
@@ -187,7 +187,7 @@ class SoapController extends Controller
 
         try {
             $response = "Ticket: {$parameters->getTicket()} | ";
-            $response .= "Hresult: {$parameters->hresult()} | ";
+            $response .= "Hresult: {$parameters->getHresult()} | ";
             $response .= "Message: {$parameters->getMessage()}";
 
             $this->queueService->markQueueFailed();
